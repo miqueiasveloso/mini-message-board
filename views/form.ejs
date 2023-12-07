@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    #header {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    #main {
+      padding: 20px;
+      background: #fff;
+      color: #333;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      display: inline;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>New Message</h1>
+  </div>
+  <div class="container">
+    <div id="main">
+      <form method="POST" action="/new">
+        <label for="user">Name:</label><br>
+        <input type="text" id="user" name="user"><br>
+        <label for="text">Message:</label><br>
+        <input type="text" id="text" name="text"><br>
+        <input type="submit" value="Submit">
+      </form>
+      <a href="/">Back</a>
+    </div>
+  </div>
+</body>
+</html>

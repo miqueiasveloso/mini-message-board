@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    #header {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    #main {
+      padding: 20px;
+      background: #fff;
+      color: #333;
+    }
+    .message {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Mini Messageboard</h1>
+  </div>
+  <div class="container">
+    <div id="main">
+      <a href="/new">New message</a>
+      <% messages.forEach(function(message) { %>
+        <div class="message">
+          <strong><%= message.user %></strong>: <%= message.text %> 
+          <br>
+          Added on <%= message.added %>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>
